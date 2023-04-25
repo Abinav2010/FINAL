@@ -6,13 +6,13 @@ import axios from "axios";
 import {create as ipfsHttpClient } from "ipfs-http-client";
 
 
-const projectId = "2KlxBimFqB5o12FZd6HpgzF2D4p";
-const projectSecretKey = "3c953e7dac479ed3f4f1440b232db772";
+const projectId = "project ID";
+const projectSecretKey = "project secret key";
 const auth = `Basic ${Buffer.from(`${projectId}:${projectSecretKey}`).toString(
   "base64"
 )}`;
 
-const subdomain = "https://biosafe-app.infura-ipfs.io";
+const subdomain = "subdomain";
 
 
 
@@ -169,7 +169,7 @@ const createNFT = async (name, price, image, description, router) => {
 
   try {
     const added = await client.add(data);
-    const url = `https://biosafe-app.infura-ipfs.io/ipfs/${added.path}`;
+    const url = `https://infura-ipfs.io/ipfs/${added.path}`;
     await createSale(url, price);
     router.push("/searchPage");
   } catch (error) {
