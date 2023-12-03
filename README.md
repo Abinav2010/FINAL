@@ -1,3 +1,3 @@
 # FINAL
-Final 4th Year Project
+Final 4th Year Project.
 Please use the master branch to access the project files 
